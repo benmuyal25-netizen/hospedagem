@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedagem 23 Esqd C Sl</title>
+    <style>
+        :root {
+            --primary: #1b3022; /* Verde Militar Selva */
+            --cavalry: #f1c40f; /* Amarelo Cavalaria */
+            --accent: #27ae60;  /* Verde Regras */
+            --tourist: #2980b9; /* Azul Passeios */
+            --food: #d35400;    /* Laranja Comida */
+            --bg: #fdfdfd;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header { 
+            background-color: var(--primary); 
+            text-align: center;
+            border-bottom: 5px solid var(--cavalry);
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.9);
+        }
+
+        .container { 
+            max-width: 500px; 
+            margin: auto; 
+            padding: 20px; 
+        }
+
+        .hero-text {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 10px 0 0 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: #666;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .accordion {
+            color: white;
+            cursor: pointer;
+            padding: 16px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.05rem;
+            font-weight: bold;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .accordion:active { transform: scale(0.98); }
+
+        .acc-rules { background-color: var(--accent); }
+        .acc-food { background-color: var(--food); }
+        .acc-tourist { background-color: var(--tourist); }
+
+        .panel {
+            padding: 0 18px;
+            background-color: var(--card-bg);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        }
+
+        .card-inner {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .card-inner:last-child { border-bottom: none; }
+
+        .card-inner h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.15rem;
+            color: #333;
+        }
+
+        .card-inner p {
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .btn-full {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: filter 0.2s;
+        }
+
+        .btn-full:hover { filter: brightness(1.1); }
+        .btn-food { background-color: var(--food); }
+        .btn-tourist { background-color: var(--tourist); }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25d366;
+            color: white;
+            padding: 18px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 30px 0 20px 0;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            gap: 10px;
+        }
+
+        .footer { 
+            text-align: center; 
+            font-size: 0.95rem; 
+            color: #444; 
+            padding-bottom: 40px; 
+            line-height: 1.6;
+        }
+
+        .footer b { 
+            color: var(--primary); 
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .active .arrow { transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Tente usar o arquivo local capa.jpg ou a imagem da internet abaixo -->
+    <img src="capa.jpg" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/UHE_Tucuru%C3%AD_01.jpg/1200px-UHE_Tucuru%C3%AD_01.jpg'" alt="UHE Tucuruí" class="banner-img">
+</header>
+
+<div class="container">
+    
+    <div class="hero-text">
+        <h1>Casa de Hóspedes</h1>
+        <p>23º Esquadrão de Cavalaria de Selva</p>
+    </div>
+
+    <!-- REGRAS -->
+    <button class="accordion acc-rules">
+        <span>📋 Regras da Casa</span>
+        <span class="arrow">▼</span>
+    </button>
+    <div class="panel">
+        <div class="card-inner">
+            <p>🐾 <b>Pets:</b> Seu pet é bem-vindo, mas pedimos que não suba em camas e sofás. Favor recolher os dejetos.</p>
+            <p>🧹 <b>Estado da Casa:</b> Entregue a casa como encontrou: louças lavadas, lixo recolhido, geladeira limpa e móveis no lugar original.</p>
+            <p>🌱 <b>Sustentabilidade:</b> Desligue o ar-condicionado e as luzes sempre que sair do imóvel.</p>
+        </div>
+    </div>
+
+    <!-- ONDE COMER (5 ITENS) -->
+    <button class="accordion acc-food">
+        <span>🍴 Onde Comer (Lanches e +)</span>
+        <span class="arrow">▼</span>
+    </button>
+    <div class="panel">
+        <div class="card-inner">
+            <h3>BR Food</h3>
+            <p>Famoso pelas barcas de lanches, combos e hot dogs caprichados.</p>
+            <a href="https://www.google.com/maps/search/BR+Food+Tucurui" target="_blank" class="btn-full btn-food">🍴 Pedir Agora</a>
+        </div>
+        <div class="card-inner">
+            <h3>Flash Burger</h3>
+            <p>Hambúrgueres artesanais com ingredientes selecionados.</p>
+            <a href="https://www.google.com/maps/search/Flash+Burger+Tucurui" target="_blank" class="btn-full btn-food">🍴 Ver Cardápio</a>
+        </div>
+        <div class="card-inner">
+            <h3>Terraço Restaurante</h3>
+            <p>Vista privilegiada e ótimas opções de pizzas e pratos.</p>
+            <a href="https://www.google.com/maps/search/Terraço+Restaurante+Tucurui" target="_blank" class="btn-full btn-food">🍴 Ver Local</a>
+        </div>
+        <div class="card-inner">
+            <h3>Sabor de Minas</h3>
+            <p>Comida caseira e lanches tradicionais muito elogiados.</p>
+            <a href="https://www.google.com/maps/search/Sabor+de+Minas+Tucurui" target="_blank" class="btn-full btn-food">🍴 Ver Local</a>
+        </div>
+        <div class="card-inner">
+            <h3>Restaurante Tucunaré</h3>
+            <p>Especialista em peixes da região, indispensável em Tucuruí.</p>
+            <a href="https://www.google.com/maps/search/Restaurante+Tucunaré+Tucurui" target="_blank" class="btn-full btn-food">🍴 Ver Local</a>
+        </div>
+    </div>
+
+    <!-- GUIA DE PASSEIOS (5 ITENS) -->
+    <button class="accordion acc-tourist">
+        <span>📍 Guia de Passeios</span>
+        <span class="arrow">▼</span>
+    </button>
+    <div class="panel">
+        <div class="card-inner">
+            <h3>Barragem de Tucuruí</h3>
+            <p>Conheça a magnitude de uma das maiores hidrelétricas do mundo.</p>
+            <a href="https://www.google.com/maps/search/Barragem+de+Tucurui" target="_blank" class="btn-full btn-tourist">📍 Ver no Mapa</a>
+        </div>
+        <div class="card-inner">
+            <h3>Mirante das Eclusas</h3>
+            <p>Vista privilegiada da usina e do sistema de eclusas.</p>
+            <a href="https://www.google.com/maps/search/Mirante+das+Eclusas+Tucurui" target="_blank" class="btn-full btn-tourist">📍 Ver no Mapa</a>
+        </div>
+        <div class="card-inner">
+            <h3>Praia da Pedranheira</h3>
+            <p>Lazer e banho de rio em uma das ilhas mais bonitas do lago.</p>
+            <a href="https://www.google.com/maps/search/Praia+da+Pedranheira" target="_blank" class="btn-full btn-tourist">📍 Ver no Mapa</a>
+        </div>
+        <div class="card-inner">
+            <h3>Praça do Tucunaré</h3>
+            <p>Passeio clássico na orla com vista para o Rio Tocantins.</p>
+            <a href="https://www.google.com/maps/search/Praça+do+Tucunaré+Tucurui" target="_blank" class="btn-full btn-tourist">📍 Ver no Mapa</a>
+        </div>
+        <div class="card-inner">
+            <h3>Ilha da Efigênia</h3>
+            <p>Passeio de barco relaxante com belas paisagens naturais.</p>
+            <a href="https://www.google.com/maps/search/Ilha+da+Efigênia+Tucurui" target="_blank" class="btn-full btn-tourist">📍 Ver no Mapa</a>
+        </div>
+    </div>
+
+    <!-- CONTATO -->
+    <a href="https://wa.me/5594981436800" target="_blank" class="btn-whatsapp">
+        💬 Dúvidas? Fale no WhatsApp
+    </a>
+
+    <!-- RODAPÉ -->
+    <div class="footer">
+        Desejamos uma excelente estadia! <br>
+        <b>SELVA!</b>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    }
+</script>
+
+</body>
+</html>
